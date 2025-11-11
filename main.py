@@ -2473,7 +2473,7 @@ async def preview_formatting(request: ExportRequest):
         llm = get_llm()
         
         # Load template to get instructions
-        template_path = 'template/Template.docx'
+        template_path = 'template/Template2.docx'
         doc = Document(template_path)
         
         # Extract instructions
@@ -4175,7 +4175,7 @@ def add_contents_page(doc: Document, title: str, contents: List[str]):
 async def create_word_document_with_ai_formatting(
     raw_ai_content: str,
     llm_service,
-    template_path: str = 'template/Template.docx',
+    template_path: str = 'template/Template2.docx',
     user_provided_title: Optional[str] = None
 ) -> bytes:
     """
@@ -4735,7 +4735,7 @@ async def export_word(request: ExportRequest):
     - Professional formatting with Table of Contents
     """
     try:
-        template_path = 'template/Template.docx'
+        template_path = 'template/Template2.docx'
         
         print(f"\n{'='*60}")
         print(f"📤 WORD EXPORT REQUEST")
@@ -4807,7 +4807,7 @@ async def export_pdf(request: ExportRequest):
     Pages 3-4 are removed after being used as system prompt.
     """
     try:
-        template_path = 'template/Template.docx'
+        template_path = 'template/Template2.docx'
         
         print(f"\n{'='*60}")
         print(f"📤 PDF EXPORT REQUEST")
